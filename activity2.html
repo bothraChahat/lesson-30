@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>API Validation in JS</h2>
+
+    <input type="number" id="idi" min="100"
+    max="700"><br>
+    <p>please enter values between 100 and 700</p>
+
+    <button onclick="validate()">ok</button>
+    <p id="p1"></p>
+    <script>
+        function validate(){
+            var value=document.getElementById("idi");
+            if(!value.checkValidity()){
+                document.getElementById("p1").innerHTML=value.validitionMessage;
+
+            }
+            else{
+                document.getElementById("p1").innerHTML="ok";
+            }
+        }
+    </script>
+</body>
+</html>
